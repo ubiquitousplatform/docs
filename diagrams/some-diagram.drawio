@@ -1,0 +1,73 @@
+<mxfile host="Electron" modified="2023-10-11T01:32:40.516Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.8 Chrome/114.0.5735.289 Electron/25.5.0 Safari/537.36" etag="kOSXGoHIa0oIx8IEBg03" version="21.6.8" type="device">
+  <diagram name="Page-1" id="N6jj-0NDrT18Jik78WQh">
+    <mxGraphModel dx="1374" dy="854" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UqaHu88e98SAqbazZNeR-6" value="imports" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="UqaHu88e98SAqbazZNeR-4" target="UqaHu88e98SAqbazZNeR-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="UqaHu88e98SAqbazZNeR-4" target="UqaHu88e98SAqbazZNeR-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-4" value="Typescript file 1" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="520" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-5" value="Typescript file 2" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="440" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="UqaHu88e98SAqbazZNeR-7" target="UqaHu88e98SAqbazZNeR-18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-7" value="jco (API version)" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=0" parent="1" vertex="1">
+          <mxGeometry x="420" y="675" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="UqaHu88e98SAqbazZNeR-8" target="UqaHu88e98SAqbazZNeR-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-8" value="wasm-tools" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="510" y="770" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="UqaHu88e98SAqbazZNeR-9" target="UqaHu88e98SAqbazZNeR-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-9" value="esbuild" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="270" y="520" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="UqaHu88e98SAqbazZNeR-11" target="UqaHu88e98SAqbazZNeR-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-11" value="type stripping" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="270" y="580" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="UqaHu88e98SAqbazZNeR-13" target="UqaHu88e98SAqbazZNeR-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-13" value="bundling" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="275" y="630" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="UqaHu88e98SAqbazZNeR-14" target="UqaHu88e98SAqbazZNeR-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-14" value="output generation" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="270" y="680" width="105" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="UqaHu88e98SAqbazZNeR-16" target="UqaHu88e98SAqbazZNeR-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-16" value="spidermonkey" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="770" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-18" value="output wasm file" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="590" y="510" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-23" value="Build multiple typescript files into a single wasm component" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.stickyNote2;fontColor=#666666;mainText=;fontSize=17;whiteSpace=wrap;fillColor=#ffffcc;strokeColor=#F62E00;" parent="1" vertex="1">
+          <mxGeometry x="240" y="200" width="260" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="UqaHu88e98SAqbazZNeR-24" value="how to place spidermonkey into a separate component and dynamically link" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.stickyNote2;fontColor=#666666;mainText=;fontSize=17;whiteSpace=wrap;fillColor=#ffffcc;strokeColor=#F62E00;" parent="1" vertex="1">
+          <mxGeometry x="70" y="940" width="260" height="200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
