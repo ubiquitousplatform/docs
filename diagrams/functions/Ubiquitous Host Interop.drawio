@@ -1,0 +1,208 @@
+<mxfile host="Electron" modified="2024-03-17T02:32:14.882Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="aSbsL7zPwcnCusmV0ZDp" version="23.1.5" type="device">
+  <diagram name="Page-1" id="sdQQm1VOS9OuC6hEkeB7">
+    <mxGraphModel dx="1934" dy="774" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-2" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Host Function Calls&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;background-color: initial; font-size: 12px; font-weight: normal;&quot;&gt;Calling functions on the host should be abstracted into each language&#39;s Ubiquitous SDK&lt;br&gt;However, a data format must be defined for how to pass data in and out of the language.&lt;br&gt;The WASM language essentially gives you a pointer to send and receive data, and you can intepret that with &quot;read a string&quot; or &quot;read a byte array&quot; type interfaces.&amp;nbsp; &amp;nbsp;So we need to define a pattern for the bytes to allow isomorphic calls with different data layouts (eg. we want to be able to send either messagepack or json, for smaller payloads, and so each language can use the implementation that&#39;s faster for it).&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial; font-size: 12px; font-weight: normal;&quot;&gt;Another thing we want to support is polymorphism on the host side.&amp;nbsp; We don&#39;t want to define a static calling interface, because that requires a separate host implementation versioning and typing updates for all implementers.&amp;nbsp; It&#39;s much simpler to have a single host function for dispatch so that the plugin interface never changes, and then version the calls and provide function dispatch across that boundary.&amp;nbsp; So that must be encoded in the header too.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial; font-size: 12px; font-weight: normal;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial; font-size: 12px; font-weight: normal;&quot;&gt;Many file formats have a fixed header (eg `ubiq`) but this is unnecessary overhead because we already know that the host function registration of a `ubiq-dispatch` function ensures that the protocol handshake will be expected.&lt;br&gt;&lt;br&gt;The data length is not needed as a parameter, because the outer host function implementation ensures that the data is constrained (is this true?)&lt;/span&gt;&lt;/div&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="80" y="110" width="520" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-3" value="Method Definition" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="620" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-4" value="3 bytes" style="verticalLabelPosition=top;shadow=0;dashed=0;align=center;html=1;verticalAlign=bottom;strokeWidth=1;shape=mxgraph.mockup.markup.curlyBrace;whiteSpace=wrap;strokeColor=#999999;labelPosition=center;" parent="1" vertex="1">
+          <mxGeometry x="120" y="600" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-6" value="Namespace" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="650" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-7" value="Method" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="650" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-8" value="Version" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="650" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-9" value="n bytes" style="verticalLabelPosition=top;shadow=0;dashed=0;align=center;html=1;verticalAlign=bottom;strokeWidth=1;shape=mxgraph.mockup.markup.curlyBrace;whiteSpace=wrap;strokeColor=#999999;labelPosition=center;" parent="1" vertex="1">
+          <mxGeometry x="360" y="600" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-11" value="Payload" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="620" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-16" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="120" y="680" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-14" value="" style="verticalLabelPosition=top;shadow=0;dashed=0;align=center;verticalAlign=bottom;strokeWidth=1;shape=mxgraph.mockup.markup.curlyBrace;whiteSpace=wrap;strokeColor=#999999;labelPosition=center;rotation=-180;horizontal=1;textDirection=ltr;html=1;" parent="uC0YP84fZPbtQVnWxb8X-16" vertex="1">
+          <mxGeometry width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-15" value="1 byte" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="uC0YP84fZPbtQVnWxb8X-16" vertex="1">
+          <mxGeometry y="10" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-18" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="200" y="680" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-19" value="" style="verticalLabelPosition=top;shadow=0;dashed=0;align=center;verticalAlign=bottom;strokeWidth=1;shape=mxgraph.mockup.markup.curlyBrace;whiteSpace=wrap;strokeColor=#999999;labelPosition=center;rotation=-180;horizontal=1;textDirection=ltr;html=1;" parent="uC0YP84fZPbtQVnWxb8X-18" vertex="1">
+          <mxGeometry width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-20" value="1 byte" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="uC0YP84fZPbtQVnWxb8X-18" vertex="1">
+          <mxGeometry y="10" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-22" value="Interop Version" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-40" y="620" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-24" value="1 byte" style="verticalLabelPosition=top;shadow=0;dashed=0;align=center;html=1;verticalAlign=bottom;strokeWidth=1;shape=mxgraph.mockup.markup.curlyBrace;whiteSpace=wrap;strokeColor=#999999;labelPosition=center;" parent="1" vertex="1">
+          <mxGeometry x="-40" y="600" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-49" value="Assets" style="childLayout=tableLayout;recursiveResize=0;shadow=1;fillStyle=auto;" parent="1" vertex="1">
+          <mxGeometry x="-40" y="740" width="840" height="319.9999999999998" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-50" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=0;strokeColor=inherit;fillColor=#ffffff;" parent="uC0YP84fZPbtQVnWxb8X-49" vertex="1">
+          <mxGeometry width="840" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-51" value="Property" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=#A7C942;align=center;fontStyle=1;fontColor=#FFFFFF;html=1;" parent="uC0YP84fZPbtQVnWxb8X-50" vertex="1">
+          <mxGeometry width="242" height="36" as="geometry">
+            <mxRectangle width="242" height="36" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-52" value="Description" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=#A7C942;align=center;fontStyle=1;fontColor=#FFFFFF;html=1;" parent="uC0YP84fZPbtQVnWxb8X-50" vertex="1">
+          <mxGeometry x="242" width="323" height="36" as="geometry">
+            <mxRectangle width="323" height="36" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-53" value="Valid Values" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=#A7C942;align=center;fontStyle=1;fontColor=#FFFFFF;html=1;" parent="uC0YP84fZPbtQVnWxb8X-50" vertex="1">
+          <mxGeometry x="565" width="275" height="36" as="geometry">
+            <mxRectangle width="275" height="36" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-54" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=0;strokeColor=inherit;fillColor=#ffffff;" parent="uC0YP84fZPbtQVnWxb8X-49" vertex="1">
+          <mxGeometry y="36" width="840" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-55" value="Interop Version" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;align=center;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-54" vertex="1">
+          <mxGeometry width="242" height="35" as="geometry">
+            <mxRectangle width="242" height="35" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-56" value="The version of the interop protocol" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;align=center;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-54" vertex="1">
+          <mxGeometry x="242" width="323" height="35" as="geometry">
+            <mxRectangle width="323" height="35" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-57" value="0" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;align=center;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-54" vertex="1">
+          <mxGeometry x="565" width="275" height="35" as="geometry">
+            <mxRectangle width="275" height="35" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-58" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" parent="uC0YP84fZPbtQVnWxb8X-49" vertex="1">
+          <mxGeometry y="71" width="840" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-59" value="Encoding&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-58" vertex="1">
+          <mxGeometry width="242" height="34" as="geometry">
+            <mxRectangle width="242" height="34" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-60" value="The encoding of the data payload" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-58" vertex="1">
+          <mxGeometry x="242" width="323" height="34" as="geometry">
+            <mxRectangle width="323" height="34" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-61" value="0 = JSON, 1 = messagepack" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-58" vertex="1">
+          <mxGeometry x="565" width="275" height="34" as="geometry">
+            <mxRectangle width="275" height="34" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-62" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=0;strokeColor=inherit;fillColor=#ffffff;" parent="uC0YP84fZPbtQVnWxb8X-49" vertex="1">
+          <mxGeometry y="105" width="840" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-63" value="Namespace" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;fontStyle=0;align=center;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-62" vertex="1">
+          <mxGeometry width="242" height="59" as="geometry">
+            <mxRectangle width="242" height="59" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-64" value="Enum value of namespace that is defined for this function class" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;fontStyle=0;align=center;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-62" vertex="1">
+          <mxGeometry x="242" width="323" height="59" as="geometry">
+            <mxRectangle width="323" height="59" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-65" value="0-254 (255 is reserved for internal test methods that are not available to the public runtime)" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;fontStyle=0;align=center;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-62" vertex="1">
+          <mxGeometry x="565" width="275" height="59" as="geometry">
+            <mxRectangle width="275" height="59" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-66" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" parent="uC0YP84fZPbtQVnWxb8X-49" vertex="1">
+          <mxGeometry y="164" width="840" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-67" value="Method" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-66" vertex="1">
+          <mxGeometry width="242" height="34" as="geometry">
+            <mxRectangle width="242" height="34" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-68" value="Enum value of the method that is defined" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-66" vertex="1">
+          <mxGeometry x="242" width="323" height="34" as="geometry">
+            <mxRectangle width="323" height="34" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-69" value="0-255&amp;nbsp;" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-66" vertex="1">
+          <mxGeometry x="565" width="275" height="34" as="geometry">
+            <mxRectangle width="275" height="34" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-149" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" parent="uC0YP84fZPbtQVnWxb8X-49" vertex="1">
+          <mxGeometry y="198" width="840" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-150" value="Version" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-149" vertex="1">
+          <mxGeometry width="242" height="72" as="geometry">
+            <mxRectangle width="242" height="72" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-151" value="Version of method" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-149" vertex="1">
+          <mxGeometry x="242" width="323" height="72" as="geometry">
+            <mxRectangle width="323" height="72" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-152" value="1-255, incremented whenever the implementation of this method changes.&amp;nbsp; Previous iterations should remain for backwards compatibility unless Interop Version is incremented" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-149" vertex="1">
+          <mxGeometry x="565" width="275" height="72" as="geometry">
+            <mxRectangle width="275" height="72" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-153" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;dropTarget=0;collapsible=0;recursiveResize=0;expand=0;fontStyle=1;strokeColor=inherit;fillColor=#EAF2D3;" parent="uC0YP84fZPbtQVnWxb8X-49" vertex="1">
+          <mxGeometry y="270" width="840" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-154" value="Payload" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-153" vertex="1">
+          <mxGeometry width="242" height="50" as="geometry">
+            <mxRectangle width="242" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-155" value="The actual payload, in {Encoding} format" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-153" vertex="1">
+          <mxGeometry x="242" width="323" height="50" as="geometry">
+            <mxRectangle width="323" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-156" value="encoded form of a payload that can be handled by the given version of the given Method" style="connectable=0;recursiveResize=0;strokeColor=inherit;fillColor=inherit;whiteSpace=wrap;html=1;" parent="uC0YP84fZPbtQVnWxb8X-153" vertex="1">
+          <mxGeometry x="565" width="275" height="50" as="geometry">
+            <mxRectangle width="275" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-84" value="Encoding" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="620" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-85" value="1 byte" style="verticalLabelPosition=top;shadow=0;dashed=0;align=center;html=1;verticalAlign=bottom;strokeWidth=1;shape=mxgraph.mockup.markup.curlyBrace;whiteSpace=wrap;strokeColor=#999999;labelPosition=center;" parent="1" vertex="1">
+          <mxGeometry x="40" y="600" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-89" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="280" y="680" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-90" value="" style="verticalLabelPosition=top;shadow=0;dashed=0;align=center;verticalAlign=bottom;strokeWidth=1;shape=mxgraph.mockup.markup.curlyBrace;whiteSpace=wrap;strokeColor=#999999;labelPosition=center;rotation=-180;horizontal=1;textDirection=ltr;html=1;" parent="uC0YP84fZPbtQVnWxb8X-89" vertex="1">
+          <mxGeometry width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uC0YP84fZPbtQVnWxb8X-91" value="1 byte" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="uC0YP84fZPbtQVnWxb8X-89" vertex="1">
+          <mxGeometry y="10" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ba7ENwL4AyIQzZOzWejb-1" value="&lt;h1&gt;design drawbacks&lt;/h1&gt;&lt;div&gt;this allows versioning of functions, but doesn&#39;t allow versioning of the function table itself.&amp;nbsp; it might be worth a few bytes to have a table version so that functions can be re-sorted. or that could be handled by the interop version.&amp;nbsp; the downside to this is if functions get moved it&#39;s gonna be a breaking change, so there will have to be a mapper for each previous table version to the new table version which will introduce some overhead.&amp;nbsp; so probably best to not rename / version methods unless necessary, and don&#39;t let the numbers be meaningful besides the namespaces themselves.&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="724" width="190" height="376" as="geometry" />
+        </mxCell>
+        <mxCell id="ba7ENwL4AyIQzZOzWejb-2" value="&lt;h1&gt;Thoughts&lt;/h1&gt;&lt;div&gt;Do we need to declare the input and output types of the methods? or do both sides of the protocol have shared knowledge of the data format?&lt;/div&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1085" y="780" width="190" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

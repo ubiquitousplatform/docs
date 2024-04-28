@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-02-25T01:04:42.953Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="Q0avYTsTqnimEUbFVcsd" version="23.1.5" type="device">
+<mxfile host="Electron" modified="2024-02-25T01:12:18.544Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="Q-HHB8j7OwUYqSsOxnLg" version="23.1.5" type="device">
   <diagram name="Page-1" id="8LoeNkvqYndlKAMbdP8W">
-    <mxGraphModel dx="1193" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1445" dy="867" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,8 +10,50 @@
         <mxCell id="HaXo8SeIInuvV-pDLGNu-3" value="&lt;h1&gt;CLI&amp;nbsp;&lt;/h1&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="120" y="490" width="190" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="HaXo8SeIInuvV-pDLGNu-4" value="&lt;h1&gt;Runtime&lt;/h1&gt;&lt;div&gt;- Load .wasm file from filesystem&lt;/div&gt;&lt;div&gt;- Call endpoint into .wasm file&lt;/div&gt;&lt;div&gt;- Set env vars&lt;/div&gt;&lt;div&gt;- Standard JSON i/o wrapper that can call a function inbound&lt;/div&gt;&lt;div&gt;- Standard JSON i/o wrapper protocol that can call a WASM function outbound&lt;/div&gt;&lt;div&gt;- Benchmarking&lt;/div&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="640" y="280" width="190" height="180" as="geometry" />
+        <mxCell id="HaXo8SeIInuvV-pDLGNu-4" value="&lt;h1&gt;Runtime&lt;/h1&gt;&lt;div&gt;- Load .wasm file from filesystem&lt;/div&gt;&lt;div&gt;- Call endpoint into .wasm file&lt;/div&gt;&lt;div&gt;- Set env vars&lt;/div&gt;&lt;div&gt;- Standard JSON i/o wrapper that can call a function inbound&lt;/div&gt;&lt;div&gt;- Standard JSON i/o wrapper protocol that can call a WASM function outbound&lt;/div&gt;&lt;div&gt;- Benchmarking&lt;/div&gt;&lt;div&gt;Runtime Phase 1&lt;br style=&quot;border-color: var(--border-color); text-align: center;&quot;&gt;&lt;span style=&quot;text-align: center;&quot;&gt;- No Caching, Scaling, Warmup, etc.&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="380" y="270" width="190" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="HaXo8SeIInuvV-pDLGNu-5" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="960" y="220" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HaXo8SeIInuvV-pDLGNu-7" value="ubiquitous.runtime" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="530" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HaXo8SeIInuvV-pDLGNu-8" value="Read .wasm file" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="550" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HaXo8SeIInuvV-pDLGNu-10" value="HTTP API Endpoints" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="790" y="270" width="210" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="HaXo8SeIInuvV-pDLGNu-9" value="Invoke" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HaXo8SeIInuvV-pDLGNu-10">
+          <mxGeometry x="20" y="40" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HaXo8SeIInuvV-pDLGNu-11" value="Functions/Register" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HaXo8SeIInuvV-pDLGNu-10">
+          <mxGeometry x="20" y="85" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HaXo8SeIInuvV-pDLGNu-12" value="Functions/Unregister" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HaXo8SeIInuvV-pDLGNu-10">
+          <mxGeometry x="20" y="130" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HaXo8SeIInuvV-pDLGNu-13" value="&lt;h1&gt;Criteria&lt;/h1&gt;&lt;p&gt;all functions have a `name`, a `version`, and an `alias`.&amp;nbsp;&lt;/p&gt;&lt;p&gt;- the `name` is a string that is persistent and uniquely identifies the function within the tenant/region&lt;/p&gt;&lt;p&gt;- the `version` is a uuidv7&lt;/p&gt;&lt;p&gt;- the alias&lt;/p&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="HaXo8SeIInuvV-pDLGNu-10">
+          <mxGeometry x="20" y="300" width="190" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="HaXo8SeIInuvV-pDLGNu-26" value="Client OAuth Login Endpoint" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HaXo8SeIInuvV-pDLGNu-10">
+          <mxGeometry x="20" y="180" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HaXo8SeIInuvV-pDLGNu-14" value="UI" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="520" width="210" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="HaXo8SeIInuvV-pDLGNu-15" value="Trace Viewer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HaXo8SeIInuvV-pDLGNu-14">
+          <mxGeometry x="20" y="40" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HaXo8SeIInuvV-pDLGNu-20" value="Can we reuse Aspire UI to start??" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="HaXo8SeIInuvV-pDLGNu-14">
+          <mxGeometry x="10" y="90" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HaXo8SeIInuvV-pDLGNu-21" value="Capabilities" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="260" width="420" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="HaXo8SeIInuvV-pDLGNu-22" value="ubiq.functions.deployment.read/write" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="HaXo8SeIInuvV-pDLGNu-21">
+          <mxGeometry x="20" y="40" width="210" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
