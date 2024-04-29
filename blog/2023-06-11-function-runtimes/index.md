@@ -5,7 +5,6 @@ authors: [lukevp]
 tags: [functions, runtime, comparison]
 ---
 
-
 The Ubiquitous Platform supports multiple function runtimes: `javascript`, `typescript`, `go`, and `rust`.  
 
 `go`, `rust`, `csharp`, `python`, and `ruby`.
