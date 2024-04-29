@@ -1,7 +1,7 @@
 ---
 slug: function-runtimes-comparison
 title: Function Runtimes Comparison
-authors: [lukep]
+authors: [lukevp]
 tags: [functions, runtime, comparison]
 ---
 
