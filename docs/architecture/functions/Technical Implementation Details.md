@@ -50,7 +50,17 @@ On top of this simple interop pattern, each library will be able to call all of 
 
 The IPC call itself is stringly-typed, but on each end, the parser ensures that the parameters are properly in line with expectations.
 
+TODO: use http / REST over Host Functions instead of making custom implementations.  
 
+
+Theory to test:
+
+TypeSpec file generates OpenAPI spec
+OpenAPI spec is fed into openapi-generator CLI
+client libraries are generated for TypeScript / Go / Rust / C#
+the client libraries are hooked into / adapted to build the HTTP request but then send it across the IPC boundary to the WASM host instead. headers, route, query parameters, and body are all parsed via JSON.
+
+openapi-generator supports customizing of the generated code so it can be adapted for this situation.
 
 
 

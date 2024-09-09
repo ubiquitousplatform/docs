@@ -1,4 +1,4 @@
-# Architecture Decision Record: Use WebAssembly for Functions
+# [DRAFT] Architecture Decision Record: Use WebAssembly for Functions
 
 ## Context
 

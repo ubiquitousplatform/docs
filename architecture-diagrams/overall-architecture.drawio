@@ -1,0 +1,114 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8" pages="2">
+  <diagram name="Page-1" id="BgAlnJKzv2X2zv37iYPG">
+    <mxGraphModel dx="2230" dy="837" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kKCNf0tcYqpQr1MLi-TP-1" target="kKCNf0tcYqpQr1MLi-TP-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="kKCNf0tcYqpQr1MLi-TP-15" target="kKCNf0tcYqpQr1MLi-TP-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-1" value="gateway&lt;br&gt;(asp.net core app and yarp, subprocess host)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="230" width="105" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="kKCNf0tcYqpQr1MLi-TP-2" target="kKCNf0tcYqpQr1MLi-TP-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-2" value="runtime&lt;br&gt;(functions)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-3" value="telemetry&lt;br&gt;(aspire local)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-4" value="admin api" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="120" width="105" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-5" value="CRUD" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="kKCNf0tcYqpQr1MLi-TP-4" target="kKCNf0tcYqpQr1MLi-TP-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kKCNf0tcYqpQr1MLi-TP-7" target="kKCNf0tcYqpQr1MLi-TP-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-7" value="cli" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-120" y="250" width="105" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-10" value="Using a CLI for the first version is cheaper than building a UI" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-330" y="240" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="kKCNf0tcYqpQr1MLi-TP-15" target="kKCNf0tcYqpQr1MLi-TP-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="kKCNf0tcYqpQr1MLi-TP-15" target="kKCNf0tcYqpQr1MLi-TP-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-15" value="browser" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="350" width="105" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-17" value="functions should be totally decoupled from the rest of the architecture. this is more marketable and easier to reason about. &lt;br&gt;this also means in prod we can scale out the function runners.&lt;br&gt;in the future, we can use http/3 or quic or pipes to speed up communication between the processes." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="610" y="30" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-19" value="The runtime needs to support different OTEL destinations for each tenant, or we need to run at least one runtime instance for each tenant. maybe easier to do one per tenant at first and switch to a more complicated approach at scale.&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="760" y="160" width="270" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="kKCNf0tcYqpQr1MLi-TP-20" target="kKCNf0tcYqpQr1MLi-TP-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-20" value="storage&lt;br&gt;(EF to SQLite locally)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-22" value="?? do we need to notify runtime when things change in storage? maybe we do this via events?" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="380" y="30" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-23" value="kv / queues&lt;br&gt;(garnet)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-24" value="jobs dashboard&lt;br&gt;(hangfire)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-25" value="jobs runner &lt;br&gt;(hangfire)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.899;entryY=1.004;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="kKCNf0tcYqpQr1MLi-TP-25" target="kKCNf0tcYqpQr1MLi-TP-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-27" value="Hangfire is included but it can only run wasm jobs, not C# jobs, except ones provided by ubiquitous natively" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="970" y="280" width="280" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-29" value="?? How do we minimize production dependencies?&lt;br&gt;&lt;br&gt;Hangfire for example uses either Redis or Postgres for jobs.&amp;nbsp; Do we allow Redis and/or Postgres to be production dependencies? or do we include the sqlite version or something for prod?&lt;br&gt;&lt;br&gt;&lt;br&gt;And what do we do for our sqs / queue replacement? do we not use redis queue functionality if Garnet doesn&#39;t support it yet?" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="125" y="540" width="400" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="kKCNf0tcYqpQr1MLi-TP-30" value="?? How do we combine disparate dashboards until we can build our own that looks the same?&amp;nbsp; iframes? or linking to each one?" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="620" y="550" width="340" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="QyFaaHx4M5t0cPcU4lT4-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QyFaaHx4M5t0cPcU4lT4-1" target="kKCNf0tcYqpQr1MLi-TP-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QyFaaHx4M5t0cPcU4lT4-1" value="compiler host / file watcher" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QyFaaHx4M5t0cPcU4lT4-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=-0.007;entryY=0.389;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="kKCNf0tcYqpQr1MLi-TP-7" target="QyFaaHx4M5t0cPcU4lT4-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QyFaaHx4M5t0cPcU4lT4-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.003;entryY=0.171;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QyFaaHx4M5t0cPcU4lT4-1" target="kKCNf0tcYqpQr1MLi-TP-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QyFaaHx4M5t0cPcU4lT4-5" value="?? How do we manage port allocations? do we just pick a high port range (like 29800-29900?) and just don&#39;t deal with conflicts for now, and that&#39;s a future problem?&lt;br&gt;&lt;br&gt;some things like the sqs sqlite implementation would need a separate process / port." style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="125" y="730" width="400" height="180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="j1JMOcsOj_2lu-Oa627D" name="Queues">
+    <mxGraphModel dx="2001" dy="1214" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_-e5Q1NqadV4ilkCeswo-2" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Options&lt;/h1&gt;&lt;p&gt;Use Redis directly&lt;br&gt;Use something like this that&#39;s SQS compatible:&amp;nbsp;https://news.ycombinator.com/item?id=40837610&lt;br&gt;Hangfire FOSS needs to use this FOSS version of Redis, but it SEEMS garnet-compatible?&amp;nbsp;&lt;a style=&quot;text-wrap: nowrap; background-color: transparent; box-sizing: border-box; text-decoration-line: none; caret-color: rgb(31, 35, 40); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; font-size: 20px; font-weight: 600; text-overflow: ellipsis; overflow-x: hidden !important; display: inline !important;&quot; href=&quot;https://github.com/marcoCasamento/Hangfire.Redis.StackExchange&quot; class=&quot;d-block overflow-x-hidden color-fg-default&quot; data-turbo-frame=&quot;repo-content-turbo-frame&quot; data-pjax=&quot;#repo-content-pjax-container&quot;&gt;Hangfire.Redis.StackExchange&lt;/a&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="270" width="400" height="180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
